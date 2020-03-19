@@ -1660,7 +1660,7 @@ class DataGenerator(KU.Sequence):
             is True then the outputs list contains target class_ids, bbox deltas,
             and masks.
         """
-def __init__(self, dataset, config, shuffle=True, augmentation=None,
+    def __init__(self, dataset, config, shuffle=True, augmentation=None,
                  random_rois=0, detection_targets=False):
 
         self.image_ids = np.copy(dataset.image_ids)
