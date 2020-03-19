@@ -1682,8 +1682,7 @@ def __init__(self, dataset, config, shuffle=True, augmentation=None,
         self.batch_size = self.config.BATCH_SIZE
         self.detection_targets = detection_targets
 
-    def __len__(self):
-        return int(np.ceil(len(self.image_ids) / float(self.batch_size)))
+    def __len__(self): return int(np.ceil(len(self.image_ids) / float(self.batch_size)))
 
     def __getitem__(self, idx):
         b = 0
