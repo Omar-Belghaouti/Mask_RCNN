@@ -1626,7 +1626,6 @@ def generate_random_rois(image_shape, count, gt_class_ids, gt_boxes):
     rois[-remaining_count:] = global_rois
     return rois
 
-
 class DataGenerator(KU.Sequence):
     """An iterable that returns images and corresponding target class ids,
         bounding box deltas, and masks. It inherits from keras.utils.Sequence to avoid data redundancy
@@ -1683,7 +1682,7 @@ class DataGenerator(KU.Sequence):
         self.detection_targets = detection_targets
 
     def __len__(self):
-	return int(np.ceil(len(self.image_ids) / float(self.batch_size)))
+        return int(np.ceil(len(self.image_ids) / float(self.batch_size)))
 
     def __getitem__(self, idx):
         b = 0
